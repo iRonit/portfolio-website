@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route path='/portfolio-website' exact component={Home} />
         </Switch>
       </Router>
     </>

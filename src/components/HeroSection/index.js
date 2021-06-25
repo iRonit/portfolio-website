@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "../Button";
-import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Typed from "react-typed";
 import {
@@ -72,59 +71,59 @@ const HeroSection = () => {
           </HeroBtnWrapper>
         </HeroContent>
         <SocialSitesContent>
-            <SocialSiteIcons>
-              <SocialSiteIcon>
-                <Link
-                  class='social-icon-link facebook'
-                  to={{ pathname: "https://facebook.com/ronit.pradhan" }}
-                  target='_blank'
-                  aria-label='Facebook'
-                >
-                  <FaFacebook />
-                </Link>
-              </SocialSiteIcon>
-              <SocialSiteIcon>
-                <Link
-                  class='social-icon-link instagram'
-                  to={{ pathname: "https://instagram.com/ronitpradhan" }}
-                  target='_blank'
-                  aria-label='Instagram'
-                >
-                  <FaInstagram />
-                </Link>
-              </SocialSiteIcon>
-              <SocialSiteIcon>
-                <Link
-                  class='social-icon-link youtube'
-                  to={{ pathname: "https://github.com" }}
-                  target='_blank'
-                  aria-label='Github'
-                >
-                  <FaGithub />
-                </Link>
-              </SocialSiteIcon>
-              <SocialSiteIcon>
-                <Link
-                  class='social-icon-link twitter'
-                  to='/'
-                  target='_blank'
-                  aria-label='Twitter'
-                >
-                  <i class='fab fa-twitter' />
-                </Link>
-              </SocialSiteIcon>
-              <SocialSiteIcon>
-                <Link
-                  class='social-icon-link twitter'
-                  to={{ pathname: "https://linkedin.com/in/ronitpradhan" }}
-                  target='_blank'
-                  aria-label='LinkedIn'
-                >
-                  <FaLinkedin />
-                </Link>
-              </SocialSiteIcon>
-            </SocialSiteIcons>
-          </SocialSitesContent>
+          <SocialSiteIcons>
+            <SocialSiteIcon>
+              <a
+                class='social-icon-link'
+                href="https://facebook.com/ronit.pradhan"
+                target='_blank'
+                aria-label='Facebook'
+              >
+                <FaFacebook />
+              </a>
+            </SocialSiteIcon>
+            <SocialSiteIcon>
+              <a
+                class='social-icon-link'
+                href="https://instagram.com/ronitpradhan"
+                target='_blank'
+                aria-label='Instagram'
+              >
+                <FaInstagram />
+              </a>
+            </SocialSiteIcon>
+            <SocialSiteIcon>
+              <a
+                class='social-icon-link'
+                href="https://github.com/iRonit"
+                target='_blank'
+                aria-label='Github'
+              >
+                <FaGithub />
+              </a>
+            </SocialSiteIcon>
+            <SocialSiteIcon>
+              <a
+                class='social-icon-link'
+                href="https://twitter.com"
+                target='_blank'
+                aria-label='Twitter'
+              >
+                <i class='fab fa-twitter' />
+              </a>
+            </SocialSiteIcon>
+            <SocialSiteIcon>
+              <a
+                class='social-icon-link'
+                href="https://linkedin.com/in/ronitpradhan"
+                target='_blank'
+                aria-label='LinkedIn'
+              >
+                <FaLinkedin />
+              </a>
+            </SocialSiteIcon>
+          </SocialSiteIcons>
+        </SocialSitesContent>
       </HeroContainer>
     </>
   );

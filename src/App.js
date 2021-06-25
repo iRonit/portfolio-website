@@ -7,10 +7,10 @@ import Header from './components/Header';
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/portfolio-website">
         <Header />
         <Switch>
-          <Route path='/portfolio-website' exact component={Home} />
+          <Route path='/' exact component={Home} />
         </Switch>
       </Router>
     </>

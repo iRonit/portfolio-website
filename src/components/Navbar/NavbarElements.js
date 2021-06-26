@@ -7,6 +7,7 @@ export const Nav = styled.nav`
     scrollNav
       ? "linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%)"
       : "transparent"};
+  display: ${({ show }) => (show ? "flex" : "none")};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -92,4 +93,14 @@ export const NavLinks = styled(LinkS)`
     border-bottom: 6px solid #fff;
     transition: all 0.25s ease-out;
   }
+`;
+
+export const NavLinksR = styled(LinkR)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
 `;

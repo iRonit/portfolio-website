@@ -8,19 +8,22 @@ import {
   MobileIcon,
   NavMenu,
   NavItem,
-  NavLinks
+  NavLinks,
+  NavLinksR
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
   const [navBarText, setNavBarText] = useState('My Portfolio');
   const [scrollNav, setScrollNav] = useState(false);
   const changeNav = () => {
-    if (window.scrollY >= document.getElementById('home').clientHeight - 80) {
-      setScrollNav(true);
-      setNavBarText('Ronit Pradhan');
-    } else {
-      setScrollNav(false);
-      setNavBarText('My Portfolio');
+    if(document.getElementById('home') != null ) {
+      if (window.scrollY >= document.getElementById('home').clientHeight - 80) {
+        setScrollNav(true);
+        setNavBarText('Ronit Pradhan');
+      } else {
+        setScrollNav(false);
+        setNavBarText('My Portfolio');
+      }
     }
   };
   useEffect(() => {
@@ -69,13 +72,8 @@ const Navbar = ({ toggle }) => {
               >Experience</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="contact"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-              >Contact</NavLinks>
+              <NavLinksR to="/contact"
+              >Contact</NavLinksR>
             </NavItem>
           </NavMenu>
         </NavbarContainer>

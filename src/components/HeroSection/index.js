@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button } from "../Button";
-import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { ButtonS, ButtonR } from "../Button";
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import Typed from "react-typed";
 import {
   HeroContainer,
@@ -43,31 +43,21 @@ const HeroSection = () => {
             />
           </HeroP>
           <HeroBtnWrapper>
-            <Button
+            <ButtonS
               to="about-me"
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
               className="btns btn--outline btn--large"
               primary={true}
               big={true}
             >
               Know More
-            </Button>
-            <Button
+            </ButtonS>
+            <ButtonR
               to="contact"
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
               onMouseEnter={onHover}
               onMouseLeave={onHover}
             >
               Hire Me {hover ? <ArrowForward /> : <ArrowRight />}
-            </Button>
+            </ButtonR>
           </HeroBtnWrapper>
         </HeroContent>
         <SocialSitesContent>
@@ -109,7 +99,7 @@ const HeroSection = () => {
                 target='_blank'
                 aria-label='Twitter'
               >
-                <i class='fab fa-twitter' />
+                <FaTwitter />
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>

@@ -6,9 +6,9 @@ function Footer() {
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
-      <i className='fab fa-react fa-spin fa-3x'/>
+        <i className='fab fa-react fa-spin fa-3x' />
         <p className='footer-subscription-heading'>
-          Developed Using ReactJS.
+          Developed by Ronit Pradhan using ReactJS.
         </p>
       </section>
       <section className='social-media'>
@@ -16,11 +16,12 @@ function Footer() {
           <div className='footer-logo'>
             <Link to='/' className='social-logo'>
               My Portfolio
-              <i className='fab fa-typo3' style={{ marginLeft: 0.5 + 'em' }}/>
+              <i className='fab fa-typo3' style={{ marginLeft: 0.5 + 'em' }} />
             </Link>
           </div>
-          <small className='website-rights'>Copyright © 2020</small>
+          <small className='website-rights'>Copyright © 2021 All rights reserved.</small>
           <div className='social-icons'>
+            <small className='footer-share-text'>Share on:</small>
             <Link
               className='social-icon-link facebook'
               to='/'

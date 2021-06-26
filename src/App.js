@@ -1,17 +1,25 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './components/Header';
+import Contact from './pages/Contact';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   return (
     <>
       <Router basename="/portfolio-website">
-        <Header />
-        <Switch>
-          <Route path='/' exact component={Home} />
-        </Switch>
+        <ScrollToTop>
+          <AnimatePresence exitBeforeEnter>
+            <Switch>
+              <Route path='/' exact component={Home} />
+              <Route path='/contact' exact component={Contact} />
+              {/* Redirect other paths to home */}
+              <Redirect to='/' />
+            </Switch>
+          </AnimatePresence>
+        </ScrollToTop>
       </Router>
     </>
   );

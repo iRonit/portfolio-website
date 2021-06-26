@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
 export const ContactContainer = styled.div`
     padding: 4rem;
@@ -153,4 +154,14 @@ export const ButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+`;
+
+export const BackButton = styled(motion.div)`
+    display: flex;
+    background: #0c0c0c;
+    position: absolute;
+    top: 0;
+    height: 80px;
+    justify-content: space-between;
+    z-index: 1;
 `;

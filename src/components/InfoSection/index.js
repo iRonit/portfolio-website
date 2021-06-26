@@ -31,7 +31,9 @@ const InfoSection = ({
             <Column1>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
+                <i class="fas fa-quote-left fa-2x fa-pull-left"></i>
                 <Heading lightText={lightText}>{headLine}</Heading>
+                
                 <Subtitle darkText={darkText}>{description}</Subtitle>
               </TextWrapper>
             </Column1>

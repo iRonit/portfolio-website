@@ -4,8 +4,8 @@ export const aboutMe = {
     lightText: false,
     lightTextDesc: false,
     topLine: "About Me...",
-    headLine: `"Far and away the best prize that life offers
-    is the chance to work hard at work worth doing. —Theodore Roosevelt"`,
+    headLine: `Far and away the best prize that life offers
+    is the chance to work hard at work worth doing. —Theodore Roosevelt`,
     description:
         `I am and by heart a technology enthusiast, keen on every crazy stuff
         that technology has come to offer. Been working as a Software Engineer 
@@ -29,7 +29,7 @@ export const services = {
     topLine: "Services I offer...",
     headLine: "hey there, i am Ronit and this is my React Page!",
     description:
-        `"I am a software developer and been working with Cisco. 
+        `I am a software developer and been working with Cisco. 
         I have learnt to use reactJS and thus came up with this page. 
         I am a software developer and been working with Cisco. 
         I have learnt to use reactJS and thus came up with this page.
@@ -50,7 +50,7 @@ export const services = {
         I am a software developer and been working with Cisco. 
         I have learnt to use reactJS and thus came up with this page.
         I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page. "`,
+        I have learnt to use reactJS and thus came up with this page.`,
     imgStart: true,
     img: require('../../assets/images/svg-1.svg').default,
     alt: "Me",

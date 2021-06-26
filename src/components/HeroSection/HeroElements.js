@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import { MdArrowForward, MdKeyboardArrowRight } from "react-icons/md";
+import {motion} from 'framer-motion';
 
-export const HeroContainer = styled.div`
+export const HeroContainer = styled(motion.div).attrs({
+  initial: {opacity: 0},
+  animate: {opacity: 1},
+  transition: {duration: 1.5}
+})`
   background: #0c0c0c;
   display: flex;
   justify-content: center;

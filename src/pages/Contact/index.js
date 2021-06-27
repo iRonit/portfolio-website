@@ -3,7 +3,6 @@ import emailjs from 'emailjs-com';
 import Footer from '../../components/Footer';
 import MapSection from '../../components/Map/Map';
 import { motion } from 'framer-motion';
-import { FaChevronLeft } from 'react-icons/fa';
 import { NavLogo } from '../../components/Navbar/NavbarElements';
 
 import {

@@ -1,8 +1,15 @@
 import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
+import { motion } from "framer-motion";
 
-export const Nav = styled.nav`
+export const Nav = styled(motion.nav).attrs((props) => {
+  return {
+    initial: { opacity: 0 },
+    animate: { opacity: props.shouldShowActions ? 1 : 0 },
+    transition: { opacity: { duration: 0.2 } }
+  }
+})`
   background: ${({ scrollNav }) =>
     scrollNav
       ? "linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%)"
@@ -76,7 +83,13 @@ export const NavItem = styled.li`
   height: 80px;
 `;
 
-export const NavLinks = styled(LinkS)`
+export const NavLinks = styled(LinkS).attrs({
+  smooth: true,
+  duration: 500,
+  spy: true,
+  exact: "true",
+  offset: -80
+})`
   color: #fff;
   display: flex;
   align-items: center;

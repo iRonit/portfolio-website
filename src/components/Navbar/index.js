@@ -16,7 +16,7 @@ const Navbar = ({ toggle }) => {
   const [navBarText, setNavBarText] = useState('My Portfolio');
   const [scrollNav, setScrollNav] = useState(false);
   const changeNav = () => {
-    if(document.getElementById('home') != null ) {
+    if (document.getElementById('home') != null) {
       if (window.scrollY >= document.getElementById('home').clientHeight - 80) {
         setScrollNav(true);
         setNavBarText('Ronit Pradhan');
@@ -32,9 +32,29 @@ const Navbar = ({ toggle }) => {
 
   const toggleHome = () => scroll.scrollToTop();
 
+  // Scroll Up Disappear
+  const [lastYPos, setLastYPos] = useState(0);
+  const [shouldShowActions, setShouldShowActions] = useState(true);
+  const toggleClickedAutoScroll = () => {
+    setShouldShowActions(true);
+  }
+  useEffect(() => {
+    function handleScroll() {
+      const yPos = window.scrollY;
+      const isScrollingUp = yPos < lastYPos + 1;
+      setShouldShowActions(isScrollingUp);
+      setLastYPos(yPos);
+    }
+    window.addEventListener("scroll", handleScroll, false);
+    return () => {
+      window.removeEventListener("scroll", handleScroll, false);
+    };
+  }, [lastYPos]);
+
+
   return (
     <>
-      <Nav scrollNav={scrollNav}>
+      <Nav scrollNav={scrollNav} shouldShowActions={shouldShowActions}>
         <NavbarContainer>
           <NavLogo to="/" onClick={toggleHome}>
             {navBarText}
@@ -46,29 +66,17 @@ const Navbar = ({ toggle }) => {
           <NavMenu>
             <NavItem>
               <NavLinks to="about-me"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
+                onSetActive={toggleClickedAutoScroll}
               >About Me</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="services"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
+                onSetActive={toggleClickedAutoScroll}
               >Services</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="experience"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
+                onSetActive={toggleClickedAutoScroll}
               >Experience</NavLinks>
             </NavItem>
             <NavItem>

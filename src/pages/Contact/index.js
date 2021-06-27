@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import emailjs from 'emailjs-com';
+
 import Footer from '../../components/Footer';
-import MapSection from '../../components/Map/Map';
-import { motion } from 'framer-motion';
+import MapSection from '../../components/Map';
 import { NavLogo } from '../../components/Navbar/NavbarElements';
+
+import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion';
 
 import {
     ContactContainer,
@@ -31,12 +33,6 @@ const Contact = (props) => {
         showResult(true);
         setTimeout(showResult(false), 5000);
     };
-
-    const location = {
-        address: "I'm here!",
-        lat: 12.936038361862003,
-        lng: 77.69607765236333,
-    } // our location object from earlier
 
     return (
         <>
@@ -93,7 +89,7 @@ const Contact = (props) => {
                     </Card>
                 </motion.div>
             </ContactContainer>
-            <MapSection location={location} zoomLevel={17} />
+            <MapSection />
             <Footer />
         </>
     )

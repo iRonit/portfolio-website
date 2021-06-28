@@ -64,52 +64,52 @@ const HeroSection = () => {
           <SocialSiteIcons>
             <SocialSiteIcon>
               <a
-                class='social-icon-link'
                 href="https://facebook.com/ronit.pradhan"
                 target='_blank'
+                rel='noreferrer'
                 aria-label='Facebook'
               >
-                <FaFacebook />
+                <FaFacebook color="white" size= "1.5rem"/>
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
               <a
-                class='social-icon-link'
                 href="https://instagram.com/ronitpradhan"
                 target='_blank'
+                rel='noreferrer'
                 aria-label='Instagram'
               >
-                <FaInstagram />
+                <FaInstagram color="white" size= "1.5rem"/>
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
               <a
-                class='social-icon-link'
                 href="https://github.com/iRonit"
                 target='_blank'
+                rel='noreferrer'
                 aria-label='Github'
               >
-                <FaGithub />
+                <FaGithub color="white" size= "1.5rem"/>
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
               <a
-                class='social-icon-link'
                 href="https://twitter.com"
                 target='_blank'
+                rel='noreferrer'
                 aria-label='Twitter'
               >
-                <FaTwitter />
+                <FaTwitter color="white" size= "1.5rem"/>
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
               <a
-                class='social-icon-link'
                 href="https://linkedin.com/in/ronitpradhan"
                 target='_blank'
+                rel='noreferrer'
                 aria-label='LinkedIn'
               >
-                <FaLinkedin />
+                <FaLinkedin color="white" size= "1.5rem"/>
               </a>
             </SocialSiteIcon>
           </SocialSiteIcons>

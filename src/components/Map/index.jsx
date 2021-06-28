@@ -66,10 +66,10 @@ const Map = () => {
                 >
                     <NavigationControl style={navControlStyle} />
                     <Marker latitude={workBaseLoc.la} longitude={workBaseLoc.lg} offsetLeft={-12} offsetTop={-32}>
-                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                        <i className="fas fa-map-marker-alt fa-2x"></i>
                     </Marker>
                     <Marker latitude={currentLoc.la} longitude={currentLoc.lg} offsetLeft={-12} offsetTop={-32}>
-                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                        <i className="fas fa-map-marker-alt fa-2x"></i>
                     </Marker>
 
                     <SocialSitesContent>

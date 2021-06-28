@@ -58,7 +58,7 @@ const Navbar = ({ toggle }) => {
         <NavbarContainer>
           <NavLogo to="/" onClick={toggleHome}>
             {navBarText}
-            <i class="fab fa-typo3" style={{ marginLeft: 0.5 + 'em' }} />
+            <i className="fab fa-typo3" style={{ marginLeft: 0.5 + 'em' }} />
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />

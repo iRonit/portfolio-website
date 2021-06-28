@@ -43,7 +43,7 @@ const Contact = (props) => {
                 transition={{ duration: 1.5 }}>
                 <NavLogo to="/">
                     My Portfolio
-                    <i class="fab fa-typo3" style={{ marginLeft: 0.5 + 'em' }} />
+                    <i className="fab fa-typo3" style={{ marginLeft: 0.5 + 'em' }} />
                 </NavLogo>
             </BackButton>
             <ContactContainer id="contact">

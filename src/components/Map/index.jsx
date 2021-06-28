@@ -47,7 +47,7 @@ const Map = () => {
 
     const zoomOut = () => setViewport({
         ...viewport,
-        zoom: 3,
+        zoom: 1.5,
         transitionDuration: 2000
     })
 

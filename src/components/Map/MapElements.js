@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const SocialSitesContent = styled.div`
+export const MarkerMenuContent = styled.div`
   align-items: center;
   margin: 0;
 `;
 
-export const SocialSiteIcons = styled.div`
+export const MarkerMenuIcons = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,7 +29,7 @@ export const SocialSiteIcons = styled.div`
   }
 `;
 
-export const SocialSiteIcon = styled.div`
+export const MarkerMenuIcon = styled.div`
   transition: 600ms;
   padding-top: 5px;
   padding-bottom: 5px;

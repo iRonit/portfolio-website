@@ -10,13 +10,13 @@ export const SocialSiteIcons = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px 20px 20px;
+  padding: 15px 10px 15px 10px;
   z-index: 2;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   border-radius: 15px 15px 15px 15px;
   object-fit: contain;
   position: absolute;
-  right: 0;
+  right: 5px;
   bottom: 25px;
   transition: 600ms;
 

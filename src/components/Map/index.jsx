@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ReactMapGL, { FlyToInterpolator, NavigationControl, Marker } from 'react-map-gl';
+import mapboxgl from 'mapbox-gl';
 import { FaMale, FaBriefcase, FaGlobeAsia } from 'react-icons/fa';
 import {
     SocialSitesContent,
@@ -8,6 +9,10 @@ import {
 } from './MapElements';
 
 const Map = () => {
+
+    // Some issue
+    // eslint-disable-next-line import/no-webpack-loader-syntax
+    mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
     const workBaseLoc = {
         text: "Headquarter",
@@ -56,6 +61,7 @@ const Map = () => {
             <div>
                 <ReactMapGL mapboxApiAccessToken='pk.eyJ1IjoiaXJvbml0IiwiYSI6ImNrcWYxMGdsYjBpMHUydm5uYno3a254bDEifQ.hfY2_xkZZajjAK4s3cvSLQ'
                     {...viewport}
+                    mapStyle='mapbox://styles/mapbox/streets-v11'
                     onViewportChange={nextViewport => setViewport(nextViewport)}
                 >
                     <NavigationControl style={navControlStyle} />

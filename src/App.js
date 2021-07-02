@@ -1,13 +1,11 @@
-import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
 import { AnimatePresence } from 'framer-motion';
-
+import React from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-
+import ScrollToTop from './functional/ScrollToTop';
 import useGaTracker from './GATracker';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
 
 function App() {
 

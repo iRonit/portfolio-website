@@ -1,22 +1,14 @@
 import React, { useState } from "react";
-import { ButtonS, ButtonR } from "../Button";
-import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import Typed from "react-typed";
-import {
-  HeroContainer,
-  HeroBg,
-  VideoBg,
-  HeroContent,
-  HeroH1,
-  HeroP,
-  HeroBtnWrapper,
-  ArrowForward,
-  ArrowRight,
-  SocialSitesContent,
-  SocialSiteIcons,
-  SocialSiteIcon
-} from "./HeroElements";
 import heroVideo from "../../assets/videos/video-3.mp4";
+import { ButtonR, ButtonS } from "../Button";
+import {
+  ArrowForward,
+  ArrowRight, HeroBg, HeroBtnWrapper, HeroContainer, HeroContent,
+  HeroH1,
+  HeroP, SocialSiteIcon, SocialSiteIcons, SocialSitesContent, VideoBg
+} from "./HeroElements";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -69,7 +61,7 @@ const HeroSection = () => {
                 rel='noreferrer'
                 aria-label='Facebook'
               >
-                <FaFacebook color="white" size= "1.5rem"/>
+                <FaFacebook color="white" size="1.5rem" />
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
@@ -79,7 +71,7 @@ const HeroSection = () => {
                 rel='noreferrer'
                 aria-label='Instagram'
               >
-                <FaInstagram color="white" size= "1.5rem"/>
+                <FaInstagram color="white" size="1.5rem" />
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
@@ -89,7 +81,7 @@ const HeroSection = () => {
                 rel='noreferrer'
                 aria-label='Github'
               >
-                <FaGithub color="white" size= "1.5rem"/>
+                <FaGithub color="white" size="1.5rem" />
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
@@ -99,7 +91,7 @@ const HeroSection = () => {
                 rel='noreferrer'
                 aria-label='Twitter'
               >
-                <FaTwitter color="white" size= "1.5rem"/>
+                <FaTwitter color="white" size="1.5rem" />
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
@@ -109,7 +101,7 @@ const HeroSection = () => {
                 rel='noreferrer'
                 aria-label='LinkedIn'
               >
-                <FaLinkedin color="white" size= "1.5rem"/>
+                <FaLinkedin color="white" size="1.5rem" />
               </a>
             </SocialSiteIcon>
           </SocialSiteIcons>

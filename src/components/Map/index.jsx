@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
-import { FaMale, FaBriefcase, FaGlobeAsia } from 'react-icons/fa';
-
-import ReactMapGL, { FlyToInterpolator, NavigationControl, Marker } from 'react-map-gl';
 import mapboxgl from 'mapbox-gl';
-
+import React, { useState } from 'react';
+import { FaBriefcase, FaGlobeAsia, FaMale } from 'react-icons/fa';
+import ReactMapGL, { FlyToInterpolator, Marker, NavigationControl } from 'react-map-gl';
 import {
-    MarkerMenuContent,
-    MarkerMenuIcons,
-    MarkerMenuIcon
+    MarkerMenuContent, MarkerMenuIcon, MarkerMenuIcons
 } from './MapElements';
 
 const Map = () => {

@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
-import { Link as LinkS } from "react-scroll";
 import { Link as LinkR } from "react-router-dom";
+import { Link as LinkS } from "react-scroll";
+import styled from "styled-components";
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -47,7 +47,7 @@ export const SidebarMenu = styled.ul`
   }
 `;
 
-export const SidebarLink = styled(LinkS).attrs({
+export const SidebarLinkS = styled(LinkS).attrs({
   smooth: true,
   duration: 500,
   delay: 200,
@@ -74,7 +74,14 @@ export const SidebarLink = styled(LinkS).attrs({
   }
 `;
 
-export const SidebarLinkR = styled(LinkR)`
+export const SidebarLinkR = styled(LinkR).attrs({
+  smooth: true,
+  duration: 500,
+  delay: 200,
+  spy: true,
+  exact: "true",
+  offset: -80
+})`
   display: flex;
   align-items: center;
   justify-content: center;

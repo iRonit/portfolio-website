@@ -1,22 +1,13 @@
-import React, { useState } from 'react'
-
+import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import Footer from '../../components/Footer';
 import MapSection from '../../components/Map';
 import { NavLogo } from '../../components/Navbar/NavbarElements';
-
-import emailjs from 'emailjs-com';
-import { motion } from 'framer-motion';
-
 import {
-    ContactContainer,
-    Card,
-    CardContainer,
-    FormWrap,
-    Col1,
-    Col2,
-    Result,
-    ButtonWrapper,
-    BackButton
+    BackButton, ButtonWrapper, Card,
+    CardContainer, Col1,
+    Col2, ContactContainer, FormWrap, Result
 } from './ContactElements';
 
 const Contact = (props) => {

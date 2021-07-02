@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import {
-  Nav,
-  NavbarContainer,
-  NavLogo,
-  MobileIcon,
-  NavMenu,
-  NavItem,
-  NavLinks,
-  NavLinksR
+  MobileIcon, Nav,
+  NavbarContainer, NavItem, NavLinkR, NavLinkS, NavLogo, NavMenu
 } from "./NavbarElements";
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, navMenuItems }) => {
   const [navBarText, setNavBarText] = useState('My Portfolio');
   const [scrollNav, setScrollNav] = useState(false);
   const changeNav = () => {
@@ -64,25 +58,29 @@ const Navbar = ({ toggle }) => {
             <FaBars />
           </MobileIcon>
           <NavMenu>
-            <NavItem>
-              <NavLinks to="about-me"
-                onSetActive={toggleClickedAutoScroll}
-              >About Me</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="services"
-                onSetActive={toggleClickedAutoScroll}
-              >Services</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to="experience"
-                onSetActive={toggleClickedAutoScroll}
-              >Experience</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinksR to="/contact"
-              >Contact</NavLinksR>
-            </NavItem>
+            {
+              navMenuItems.map(navMenuItem => {
+                if (navMenuItem.routeType === "R") {
+                  return (
+                    < NavItem >
+                      <NavLinkR to={navMenuItem.route}
+                        onSetActive={toggleClickedAutoScroll}>
+                        {navMenuItem.title}
+                      </NavLinkR>
+                    </NavItem>
+                  );
+                } else {
+                  return (
+                    < NavItem >
+                      <NavLinkS to={navMenuItem.route}
+                        onSetActive={toggleClickedAutoScroll}>
+                        {navMenuItem.title}
+                      </NavLinkS>
+                    </NavItem>
+                  );
+                }
+              })
+            }
           </NavMenu>
         </NavbarContainer>
       </Nav>

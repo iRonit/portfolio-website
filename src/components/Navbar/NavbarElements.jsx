@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import { motion } from "framer-motion";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
-import { motion } from "framer-motion";
+import styled from "styled-components";
 
 export const Nav = styled(motion.nav).attrs((props) => {
   return {
@@ -83,7 +83,7 @@ export const NavItem = styled.li`
   height: 80px;
 `;
 
-export const NavLinks = styled(LinkS).attrs({
+export const NavLinkS = styled(LinkS).attrs({
   smooth: true,
   duration: 500,
   spy: true,
@@ -108,7 +108,13 @@ export const NavLinks = styled(LinkS).attrs({
   }
 `;
 
-export const NavLinksR = styled(LinkR)`
+export const NavLinkR = styled(LinkR).attrs({
+  smooth: true,
+  duration: 500,
+  spy: true,
+  exact: "true",
+  offset: -80
+})`
   color: #fff;
   display: flex;
   align-items: center;
@@ -116,4 +122,13 @@ export const NavLinksR = styled(LinkR)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+
+  &.active {
+    border-bottom: 3px solid #fff;
+  }
+
+  &:hover {
+    border-bottom: 6px solid #fff;
+    transition: all 0.25s ease-out;
+  }
 `;

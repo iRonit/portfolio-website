@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@svgr/cli": "^5.5.0",
     "worker-loader": "^3.0.8"
   }
 }

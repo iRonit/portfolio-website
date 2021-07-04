@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaStackOverflow } from 'react-icons/fa';
 import Typed from "react-typed";
 import heroVideo from "../../assets/videos/video-3.mp4";
 import { ButtonR, ButtonS } from "../Button";
@@ -27,10 +27,10 @@ const HeroSection = () => {
               strings={[
                 "Full Stack Developer",
                 "React/Angular Front End Developer",
-                "Java Backend Developer",
+                "Java Backend Developer"
               ]}
               typeSpeed={40}
-              backSpeed={60}
+              backSpeed={80}
               loop
             />
           </HeroP>
@@ -48,7 +48,7 @@ const HeroSection = () => {
               onMouseEnter={onHover}
               onMouseLeave={onHover}
             >
-              Hire Me {hover ? <ArrowForward /> : <ArrowRight />}
+              Say Hey! {hover ? <ArrowForward /> : <ArrowRight />}
             </ButtonR>
           </HeroBtnWrapper>
         </HeroContent>
@@ -86,12 +86,12 @@ const HeroSection = () => {
             </SocialSiteIcon>
             <SocialSiteIcon>
               <a
-                href="https://twitter.com"
+                href="https://stackoverflow.com/users/8229716/ronit-pradhan"
                 target='_blank'
                 rel='noreferrer'
-                aria-label='Twitter'
+                aria-label='StackOverflow'
               >
-                <FaTwitter color="white" size="1.5rem" />
+                <FaStackOverflow color="white" size="1.5rem" />
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>

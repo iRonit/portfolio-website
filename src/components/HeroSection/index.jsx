@@ -61,7 +61,7 @@ const HeroSection = () => {
                 rel='noreferrer'
                 aria-label='Facebook'
               >
-                <FaFacebook color="white" size="1.5rem" />
+                <FaFacebook color="white" size="1.8rem" />
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
@@ -71,7 +71,7 @@ const HeroSection = () => {
                 rel='noreferrer'
                 aria-label='Instagram'
               >
-                <FaInstagram color="white" size="1.5rem" />
+                <FaInstagram color="white" size="1.8rem" />
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
@@ -81,7 +81,7 @@ const HeroSection = () => {
                 rel='noreferrer'
                 aria-label='Github'
               >
-                <FaGithub color="white" size="1.5rem" />
+                <FaGithub color="white" size="1.8rem" />
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
@@ -91,7 +91,7 @@ const HeroSection = () => {
                 rel='noreferrer'
                 aria-label='StackOverflow'
               >
-                <FaStackOverflow color="white" size="1.5rem" />
+                <FaStackOverflow color="white" size="1.8rem" />
               </a>
             </SocialSiteIcon>
             <SocialSiteIcon>
@@ -101,7 +101,7 @@ const HeroSection = () => {
                 rel='noreferrer'
                 aria-label='LinkedIn'
               >
-                <FaLinkedin color="white" size="1.5rem" />
+                <FaLinkedin color="white" size="1.8rem" />
               </a>
             </SocialSiteIcon>
           </SocialSiteIcons>

@@ -73,6 +73,7 @@ export const HeroH1 = styled.h1`
   text-align: center;
   font-size: 100px;
   margin-top: -100px;
+  font-family: "Over the Rainbow", cursive;
 
   @media screen and (max-width: 960px) {
     font-size: 70px;
@@ -92,7 +93,7 @@ export const HeroH1 = styled.h1`
 export const HeroP = styled.p`
   margin-top: 8px;
   color: #fff;
-  font-size: 24px;
+  font-size: 40px;
   text-align: center;
   max-width: 600px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -108,19 +109,18 @@ export const HeroP = styled.p`
 `;
 
 export const HeroBtnWrapper = styled.div`
-  margin-top: 85px;
+  margin-top: 50px;
   display: flex;
-  position: absolute;
 `;
 
 export const ArrowForward = styled(MdArrowForward)`
   margin-left: 8px;
-  font-size: 20px;
+  font-size: 30px;
 `;
 
 export const ArrowRight = styled(MdKeyboardArrowRight)`
   margin-left: 8px;
-  font-size: 20px;
+  font-size: 30px;
 `;
 
 export const SocialSitesContent = styled.div`
@@ -160,7 +160,6 @@ export const SocialSiteIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 300px;
-  }
 `;
 
 export const SocialSiteIcon = styled.div`

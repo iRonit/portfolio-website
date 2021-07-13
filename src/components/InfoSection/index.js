@@ -10,7 +10,8 @@ import {
   Heading,
   Subtitle,
   ImgWrap,
-  Img } from "./InfoElements";
+  Img
+} from "./InfoElements";
 
 const InfoSection = ({
   lightBg,
@@ -22,7 +23,7 @@ const InfoSection = ({
   darkText,
   description,
   img,
-  alt}) => {
+  alt }) => {
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -33,7 +34,13 @@ const InfoSection = ({
                 <TopLine>{topLine}</TopLine>
                 <i className="fas fa-quote-left fa-2x fa-pull-left"></i>
                 <Heading lightText={lightText}>{headLine}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
+                {
+                  description.map(desc => {
+                    return (
+                      <Subtitle darkText={darkText}>{desc}</Subtitle>
+                    );
+                  })
+                }
               </TextWrapper>
             </Column1>
             <Column2>

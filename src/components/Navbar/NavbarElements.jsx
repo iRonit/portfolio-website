@@ -24,6 +24,9 @@ export const Nav = styled(motion.nav).attrs((props) => {
   position: sticky;
   top: 0;
   z-index: 10;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.8rem;
+  letter-spacing: 1.2px;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -44,7 +47,7 @@ export const NavLogo = styled(LinkR)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   display: flex;
   align-items: center;
   margin-left: 24px;

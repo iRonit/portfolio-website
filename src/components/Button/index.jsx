@@ -14,7 +14,7 @@ export const ButtonS = styled(LinkS).attrs({
     white-space: nowrap;
     padding: ${({ big }) => (big ? '14px 48px' : '12px 30px')};
     color: ${({ dark }) => (dark ? '#000' : '#fff')};
-    font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+    font-size: ${({ fontBig }) => (fontBig ? '30px' : '20px')};
     outline: ${({ primary }) => (primary ? '1px solid #fff' : 'none')};
     border: none;
     cursor: pointer;
@@ -28,7 +28,6 @@ export const ButtonS = styled(LinkS).attrs({
         transition: 600ms;
         background: ${({ primary }) => (primary ? '#fff' : '#000')};
         color: ${({ primary }) => (primary ? '#000' : '#fff')};
-        font-size: ${({ primary }) => (primary ? '20px' : '20px')};
     }
 `;
 
@@ -44,7 +43,7 @@ export const ButtonR = styled(LinkR).attrs({
     white-space: nowrap;
     padding: ${({ big }) => (big ? '14px 48px' : '12px 30px')};
     color: ${({ dark }) => (dark ? '#000' : '#fff')};
-    font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+    font-size: ${({ fontBig }) => (fontBig ? '30px' : '20px')};
     outline: ${({ primary }) => (primary ? '1px solid #fff' : 'none')};
     border: none;
     cursor: pointer;
@@ -58,6 +57,5 @@ export const ButtonR = styled(LinkR).attrs({
         transition: 600ms;
         background: ${({ primary }) => (primary ? '#fff' : '#000')};
         color: ${({ primary }) => (primary ? '#000' : '#fff')};
-        font-size: ${({ primary }) => (primary ? '20px' : '20px')};
     }
 `;

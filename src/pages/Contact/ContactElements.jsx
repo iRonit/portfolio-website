@@ -5,6 +5,8 @@ export const ContactContainer = styled.div`
     padding: 4rem;
     background: #0c0c0c;
     padding: 80px 0;
+    font-family: "Amatic SC", cursive;
+    letter-spacing: 1.2px;
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
@@ -36,7 +38,7 @@ export const CardContainer = styled.div`
 
     p {
         color: #010606;
-        font-size: 16px;
+        font-size: 2rem;
         line-height: 16px;
         font-weight: 700;
         letter-spacing: 1.4px;
@@ -76,6 +78,8 @@ export const Col1 = styled.div`
         right:0;
         margin-top: 10px;
         margin-bottom: 10px;
+        font-family: "Over the Rainbow", cursive;
+        font-size: 1.5rem;
         
         box-shadow: 0 6px 20px rgb(0 0 0 / 5%);
         -webkit-filter: drop-shadow(0 6px 20px rgb(0 0 0 / 5%));
@@ -84,7 +88,7 @@ export const Col1 = styled.div`
 
     span {
         color: grey;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
     }
 `;
 
@@ -102,6 +106,8 @@ export const Col2 = styled.div`
         resize: none;
         margin-top: 10px;
         margin-bottom: 10px;
+        font-family: 'Satisfy', cursive;
+        font-size: 1.5rem;
 
         box-shadow: 0 6px 20px rgb(0 0 0 / 5%);
         -webkit-filter: drop-shadow(0 6px 20px rgb(0 0 0 / 5%));
@@ -111,7 +117,7 @@ export const Col2 = styled.div`
 
     span {
         color: grey;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
     }
 
     button {
@@ -119,7 +125,7 @@ export const Col2 = styled.div`
         background: #000;
         padding: 14px 48px;
         color: #fff;
-        font-size: 16px;
+        font-size: 1.5rem;
         border: none;
         cursor: pointer;
         display: flex;
@@ -143,7 +149,7 @@ export const Col2 = styled.div`
 
 export const Result = styled.div`
     color: green;
-    font-size: 16px;
+    font-size: 1.5rem;
     line-height: 20px;
     font-weight: 700;
     letter-spacing: 1.1px;
@@ -158,10 +164,15 @@ export const ButtonWrapper = styled.div`
 
 export const BackButton = styled(motion.div)`
     display: flex;
+    justify-self: flex-start;
     background: #0c0c0c;
     position: absolute;
     top: 0;
     height: 80px;
     justify-content: space-between;
     z-index: 1;
+
+    @media screen and (min-width: 768px) {
+        margin-left: 10%;
+    }
 `;

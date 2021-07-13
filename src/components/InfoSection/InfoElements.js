@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const InfoContainer = styled.div`
     color: #fff;
-    background: ${({lightBg}) => (lightBg ? '#f9f9f9': '#010606')};
-    padding: 80px 0;
+    background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')};
+    padding: 50px 0;
 
     @media screen and (max-width: 768px) {
         padding: 100px 0;
@@ -26,10 +26,10 @@ export const InfoRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
-    grid-template-areas: ${({imgStart}) => (imgStart? `'col2 col1'` : `'col1 col2'`)};
+    grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width: 768px) {
-        grid-template-areas: ${({imgStart}) => (imgStart? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+        grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
     }
 `;
 
@@ -52,21 +52,21 @@ export const TextWrapper = styled.div`
 `;
 
 export const TopLine = styled.p`
-    color: #010606;
-    font-size: 16px;
-    line-height: 16px;
+    color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.4px;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 30px;
 `;
 
 export const Heading = styled.h1`
-    margin-bottom: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-size: 38px;
     line-height: 1.1;
     font-weight: 600;
-    color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
+    color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
 
     @media screen and (max-width: 480px) {
         font-size: 32px;
@@ -74,11 +74,12 @@ export const Heading = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-    max-width: 440px;
+    margin-top: 35px;
     margin-bottom: 35px;
-    font-size: 18px;
-    line-height: 24px;
-    color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
+    font-family: 'Satisfy', cursive;
+    font-size: 24px;
+    line-height: 33px;
+    color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
 `;
 
 export const ImgWrap = styled.div`

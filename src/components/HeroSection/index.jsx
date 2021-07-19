@@ -1,13 +1,11 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaStackOverflow } from 'react-icons/fa';
 import Typed from "react-typed";
 import heroVideo from "../../assets/videos/video-3.mp4";
-import { ButtonR, ButtonS } from "../Button";
 import {
-  ArrowForward,
-  ArrowRight, HeroBg, HeroBtnWrapper, HeroContainer, HeroContent,
-  HeroH1,
-  HeroP, SocialSiteIcon, SocialSiteIcons, SocialSitesContent, VideoBg
+  ArrowDown, HeroBg, HeroContainer, HeroContent,
+  HeroH1, HeroP, KnowMoreButton, SocialSiteIcon, SocialSiteIcons, SocialSitesContent, VideoBg
 } from "./HeroElements";
 
 const HeroSection = () => {
@@ -34,24 +32,23 @@ const HeroSection = () => {
               loop
             />
           </HeroP>
-          <HeroBtnWrapper>
-            <ButtonS
-              to="about-me"
-              className="btns btn--outline btn--large"
-              primary={true}
-              big={true}
-            >
-              Know More
-            </ButtonS>
-            <ButtonR
-              to="contact"
-              onMouseEnter={onHover}
-              onMouseLeave={onHover}
-            >
-              Say Hey! {hover ? <ArrowForward /> : <ArrowRight />}
-            </ButtonR>
-          </HeroBtnWrapper>
         </HeroContent>
+        <KnowMoreButton
+          to="about-me"
+        >
+          Know More About Me
+          <motion.div
+            initial={{ opacity: 0.7, y: -2 }}
+            animate={{ y: 15 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              yoyo: Infinity
+            }}
+            whileHover={{ opacity: 1 }}>
+            <ArrowDown />
+          </motion.div>
+        </KnowMoreButton>
         <SocialSitesContent>
           <SocialSiteIcons>
             <SocialSiteIcon>

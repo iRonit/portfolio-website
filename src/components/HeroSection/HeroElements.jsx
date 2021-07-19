@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { MdArrowForward, MdKeyboardArrowRight } from "react-icons/md";
+import { BiChevronsDown } from "react-icons/bi";
 import styled from "styled-components";
+import { Link as LinkS } from 'react-scroll';
 
 export const HeroContainer = styled(motion.div).attrs({
   initial: { opacity: 0 },
@@ -108,21 +109,6 @@ export const HeroP = styled.p`
   }
 `;
 
-export const HeroBtnWrapper = styled.div`
-  margin-top: 50px;
-  display: flex;
-`;
-
-export const ArrowForward = styled(MdArrowForward)`
-  margin-left: 8px;
-  font-size: 30px;
-`;
-
-export const ArrowRight = styled(MdKeyboardArrowRight)`
-  margin-left: 8px;
-  font-size: 30px;
-`;
-
 export const SocialSitesContent = styled.div`
   display: flex;
   justify-content: center;
@@ -169,4 +155,46 @@ export const SocialSiteIcon = styled.div`
     transition: 500ms;
     transform: scale(1.5);
   }
+`;
+
+export const KnowMoreButton = styled(LinkS).attrs({
+  smooth: true,
+  duration: 500,
+  spy: true,
+  exact: "true",
+  offset: -80
+})`
+  z-index: 99;
+  position: absolute;
+  bottom: 20px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  transition: 600ms;
+
+  &:hover {
+      transition: 600ms;
+      transform: scale(1.1);
+    }
+
+  @media screen and (max-width: 768px), screen and (max-height: 620px) {
+    bottom: 20%;
+    right: auto;
+    left: auto;
+
+    &:hover {
+      transition: 600ms;
+      right: auto;
+      left: auto;
+    }
+  }
+`;
+
+export const ArrowDown = styled(BiChevronsDown)`
+  font-size: 30px;
 `;

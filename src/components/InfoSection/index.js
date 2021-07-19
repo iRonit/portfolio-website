@@ -32,8 +32,11 @@ const InfoSection = ({
             <Column1>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
-                <i className="fas fa-quote-left fa-2x fa-pull-left"></i>
-                <Heading lightText={lightText}>{headLine}</Heading>
+                <Heading lightText={lightText}>
+                  <i className="fa fa-quote-left fa-pull-left"></i>
+                  {headLine}
+                  <i className="fa fa-quote-right fa-pull-right"></i>
+                </Heading>
                 {
                   description.map(desc => {
                     return (

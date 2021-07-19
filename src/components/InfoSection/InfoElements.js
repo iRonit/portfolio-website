@@ -62,7 +62,6 @@ export const TopLine = styled.p`
 
 export const Heading = styled.h1`
     margin-top: 30px;
-    margin-bottom: 30px;
     font-size: 38px;
     line-height: 1.1;
     font-weight: 600;

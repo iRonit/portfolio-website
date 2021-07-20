@@ -178,7 +178,7 @@ export const KnowMoreButton = styled(LinkS).attrs({
   exact: "true",
   offset: -80
 })`
-  z-index: 99;
+  z-index: 1;
   cursor: pointer;
   display: flex;
   flex-direction: column;

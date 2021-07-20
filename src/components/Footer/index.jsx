@@ -8,7 +8,10 @@ function Footer() {
       <section className='footer-subscription'>
         <i className='fab fa-react fa-spin fa-3x' />
         <p className='footer-subscription-heading'>
-          Developed by Ronit Pradhan using ReactJS.
+          Living, learning, & leveling up one day at a time.
+        </p>
+        <p>
+          Handcrafted by me using ReactJS.
         </p>
       </section>
       <section className='social-media'>

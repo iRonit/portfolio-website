@@ -5,8 +5,8 @@ export const navMenuItems = [
         routeType: "S"
     },
     {
-        title: "Services",
-        route: "services",
+        title: "Skills",
+        route: "skills",
         routeType: "S"
     },
     {

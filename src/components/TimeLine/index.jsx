@@ -7,7 +7,7 @@ import { TimeLineContainer, TimeLineTitle } from './TimeLineElements';
 
 const TimeLine = ({ id, timeLineItems }) => {
     return (
-        <>̵
+        <>̵̵̵
             <TimeLineContainer id={id}>
                 <TimeLineTitle>
                     Experience

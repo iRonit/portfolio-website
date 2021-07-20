@@ -30,7 +30,9 @@ const Navbar = ({ toggle, navMenuItems }) => {
   const [lastYPos, setLastYPos] = useState(0);
   const [shouldShowActions, setShouldShowActions] = useState(true);
   const toggleClickedAutoScroll = () => {
-    setShouldShowActions(true);
+    setTimeout(function () {
+      setShouldShowActions(true);
+    }, 500);
   }
   useEffect(() => {
     function handleScroll() {

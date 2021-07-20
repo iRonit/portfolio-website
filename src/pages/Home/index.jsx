@@ -3,8 +3,8 @@ import Cards from '../../components/Card';
 import Footer from '../../components/Footer';
 import HeroSection from '../../components/HeroSection';
 import InfoSection from '../../components/InfoSection';
-import { aboutMe, services } from '../../data/InfoSectionItems';
 import TimeLine from '../../components/TimeLine';
+import { aboutMe } from '../../data/InfoSectionItems';
 import { timeLineItems } from '../../data/TimeLineItems';
 import Header from '../../functional/Header';
 

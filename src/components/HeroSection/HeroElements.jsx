@@ -14,7 +14,7 @@ export const HeroContainer = styled(motion.div).attrs({
   align-items: center;
   height: 100vh;
   position: relative;
-  z-index: 1;
+  z-index: -1;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   flex-direction: column;
   object-fit: contain;
@@ -40,7 +40,7 @@ export const HeroContainer = styled(motion.div).attrs({
 `;
 
 export const HeroBg = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -157,6 +157,20 @@ export const SocialSiteIcon = styled.div`
   }
 `;
 
+export const KnowMoreButtonContainer = styled.div`
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 768px), screen and (max-height: 620px) {
+    bottom: 20%;
+    right: auto;
+    left: auto;
+  }
+`;
+
 export const KnowMoreButton = styled(LinkS).attrs({
   smooth: true,
   duration: 500,
@@ -165,9 +179,6 @@ export const KnowMoreButton = styled(LinkS).attrs({
   offset: -80
 })`
   z-index: 99;
-  position: absolute;
-  bottom: 20px;
-  border: none;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -181,18 +192,6 @@ export const KnowMoreButton = styled(LinkS).attrs({
       transition: 600ms;
       transform: scale(1.2);
     }
-
-  @media screen and (max-width: 768px), screen and (max-height: 620px) {
-    bottom: 20%;
-    right: auto;
-    left: auto;
-
-    &:hover {
-      transition: 600ms;
-      right: auto;
-      left: auto;
-    }
-  }
 `;
 
 export const ArrowDown = styled(BiChevronsDown)`

@@ -4,6 +4,7 @@ export const TimeLineContainer = styled.div`
     background: #000;
     padding: 4rem;
     font-size: 150%;
+    margin-top: -20px;
 
     @media screen and (max-width: 1163px) {
     font-size: 100%;

@@ -4,8 +4,8 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaStackOverflow } from '
 import Typed from "react-typed";
 import heroVideo from "../../assets/videos/video-3.mp4";
 import {
-  ArrowDown, HeroBg, HeroContainer, HeroContent,
-  HeroH1, HeroP, KnowMoreButton, SocialSiteIcon, SocialSiteIcons, SocialSitesContent, VideoBg
+  ArrowDown, HeroBg, HeroContainer, HeroContent, HeroH1, HeroP, KnowMoreButtonContainer,
+  KnowMoreButton, SocialSiteIcon, SocialSiteIcons, SocialSitesContent, VideoBg
 } from "./HeroElements";
 
 const HeroSection = () => {
@@ -33,6 +33,9 @@ const HeroSection = () => {
             />
           </HeroP>
         </HeroContent>
+      </HeroContainer>
+
+      <KnowMoreButtonContainer>
         <KnowMoreButton
           to="about-me"
         >
@@ -48,61 +51,62 @@ const HeroSection = () => {
             <ArrowDown />
           </motion.div>
         </KnowMoreButton>
-        <SocialSitesContent>
-          <SocialSiteIcons>
-            <SocialSiteIcon>
-              <a
-                href="https://facebook.com/ronit.pradhan"
-                target='_blank'
-                rel='noreferrer'
-                aria-label='Facebook'
-              >
-                <FaFacebook color="white" size="1.8rem" />
-              </a>
-            </SocialSiteIcon>
-            <SocialSiteIcon>
-              <a
-                href="https://instagram.com/ronitpradhan"
-                target='_blank'
-                rel='noreferrer'
-                aria-label='Instagram'
-              >
-                <FaInstagram color="white" size="1.8rem" />
-              </a>
-            </SocialSiteIcon>
-            <SocialSiteIcon>
-              <a
-                href="https://github.com/iRonit"
-                target='_blank'
-                rel='noreferrer'
-                aria-label='Github'
-              >
-                <FaGithub color="white" size="1.8rem" />
-              </a>
-            </SocialSiteIcon>
-            <SocialSiteIcon>
-              <a
-                href="https://stackoverflow.com/users/8229716/ronit-pradhan"
-                target='_blank'
-                rel='noreferrer'
-                aria-label='StackOverflow'
-              >
-                <FaStackOverflow color="white" size="1.8rem" />
-              </a>
-            </SocialSiteIcon>
-            <SocialSiteIcon>
-              <a
-                href="https://linkedin.com/in/ronitpradhan"
-                target='_blank'
-                rel='noreferrer'
-                aria-label='LinkedIn'
-              >
-                <FaLinkedin color="white" size="1.8rem" />
-              </a>
-            </SocialSiteIcon>
-          </SocialSiteIcons>
-        </SocialSitesContent>
-      </HeroContainer>
+      </KnowMoreButtonContainer>
+
+      <SocialSitesContent>
+        <SocialSiteIcons>
+          <SocialSiteIcon>
+            <a
+              href="https://facebook.com/ronit.pradhan"
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Facebook'
+            >
+              <FaFacebook color="white" size="1.8rem" />
+            </a>
+          </SocialSiteIcon>
+          <SocialSiteIcon>
+            <a
+              href="https://instagram.com/ronitpradhan"
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Instagram'
+            >
+              <FaInstagram color="white" size="1.8rem" />
+            </a>
+          </SocialSiteIcon>
+          <SocialSiteIcon>
+            <a
+              href="https://github.com/iRonit"
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Github'
+            >
+              <FaGithub color="white" size="1.8rem" />
+            </a>
+          </SocialSiteIcon>
+          <SocialSiteIcon>
+            <a
+              href="https://stackoverflow.com/users/8229716/ronit-pradhan"
+              target='_blank'
+              rel='noreferrer'
+              aria-label='StackOverflow'
+            >
+              <FaStackOverflow color="white" size="1.8rem" />
+            </a>
+          </SocialSiteIcon>
+          <SocialSiteIcon>
+            <a
+              href="https://linkedin.com/in/ronitpradhan"
+              target='_blank'
+              rel='noreferrer'
+              aria-label='LinkedIn'
+            >
+              <FaLinkedin color="white" size="1.8rem" />
+            </a>
+          </SocialSiteIcon>
+        </SocialSiteIcons>
+      </SocialSitesContent>
     </>
   );
 };

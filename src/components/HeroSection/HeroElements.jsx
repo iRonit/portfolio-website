@@ -179,7 +179,7 @@ export const KnowMoreButton = styled(LinkS).attrs({
 
   &:hover {
       transition: 600ms;
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
 
   @media screen and (max-width: 768px), screen and (max-height: 620px) {

@@ -18,7 +18,7 @@ const HeroSection = () => {
           <VideoBg autoPlay loop muted src={heroVideo} type="video/mp4" />
         </HeroBg>
         <HeroContent>
-          <HeroH1>Hello, I'm Ronit!</HeroH1>
+          <HeroH1>Hello, I'm Ronit :)</HeroH1>
           <HeroP>
             <Typed
               className="typed-text"
@@ -38,14 +38,13 @@ const HeroSection = () => {
         >
           Know More About Me
           <motion.div
-            initial={{ opacity: 0.7, y: -2 }}
-            animate={{ y: 15 }}
+            animate={{ y: [0, 15] }}
             transition={{
-              ease: "easeInOut",
-              duration: 1,
+              ease: "easeIn",
+              duration: 0.7,
               yoyo: Infinity
             }}
-            whileHover={{ opacity: 1 }}>
+          >
             <ArrowDown />
           </motion.div>
         </KnowMoreButton>

@@ -9,7 +9,8 @@ export const aboutMe = {
     description: [
         `I am and by heart a technology enthusiast, keen on every crazy stuff
         that technology has come to offer. I try and develop whatever makes life
-        easy (and with some style!) - I guess that’s the essence of technology anyway.`
+        easy (and with some style!), and hopfully make people smile - I guess
+        that’s the essence of technology!`
         ,
         `Been working as a Software Engineer
         predominantly in Java Backend services and solutions for over 5 years,

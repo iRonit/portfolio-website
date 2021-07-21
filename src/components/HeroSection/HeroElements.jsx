@@ -130,8 +130,7 @@ export const SocialSitesContent = styled.div`
 
   @media screen and (max-width: 768px), screen and (max-height: 620px) {
     bottom: 0;
-    right: auto;
-    left: auto;
+    position: inherit;
 
     &:hover {
       transition: 600ms;

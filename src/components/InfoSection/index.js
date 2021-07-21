@@ -22,16 +22,17 @@ const InfoSection = ({
   headLine,
   darkText,
   description,
+  isImg,
   img,
   alt }) => {
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
+          <TopLine lightText={lightText}>{topLine}</TopLine>
           <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
-                <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>
                   <i className="fa fa-quote-left fa-pull-left"></i>
                   {headLine}
@@ -47,9 +48,14 @@ const InfoSection = ({
               </TextWrapper>
             </Column1>
             <Column2>
-              <ImgWrap>
-                <Img src={img} alt={alt} />
-              </ImgWrap>
+              {
+                isImg ?
+                  <ImgWrap>
+                    <Img src={img} alt={alt} />
+                  </ImgWrap>
+                  :
+                  img
+              }
             </Column2>
           </InfoRow>
         </InfoWrapper>

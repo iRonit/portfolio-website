@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import HeroSection from '../../components/HeroSection';
 import InfoSection from '../../components/InfoSection';
 import TimeLine from '../../components/TimeLine';
-import { aboutMe } from '../../data/InfoSectionItems';
+import { aboutMe, skills } from '../../data/InfoSectionItems';
 import { timeLineItems } from '../../data/TimeLineItems';
 import Header from '../../functional/Header';
 
@@ -14,6 +14,7 @@ function Home() {
       <Header />
       <HeroSection />
       <InfoSection {...aboutMe} />
+      <InfoSection {...skills} />
       <TimeLine timeLineItems={timeLineItems} id="experience" />
       <Cards />
       <Footer />

@@ -1,3 +1,5 @@
+import DoughnutChart from "../components/DoughnutChart";
+
 export const aboutMe = {
     id: "about-me",
     lightBg: true,
@@ -9,20 +11,21 @@ export const aboutMe = {
     description: [
         `I am and by heart a technology enthusiast, keen on every crazy stuff
         that technology has come to offer. I try and develop whatever makes life
-        easy (and with some style!), and hopfully make people smile - I guess
+        easy (and with some style!), and hopefully make people smile - I guess
         that’s the essence of technology!`
         ,
         `Been working as a Software Engineer
         predominantly in Java Backend services and solutions for over 5 years,
         and with professional knowledge on frontend technologies as well, I have
-        worked on several websites and web-application, putting down wireframes
+        worked on several websites and web-applications, putting down wireframes
         to implementations.`
         ,
         `I have a really diverse set of skills (owing to my wild interests rampant all 
         over the place), ranging from design, sketching up logos, illustrations, UI,
         backend system designs, scaling up performances, etc.`
     ],
-    imgStart: false,
+    imgStart: true,
+    isImg: true,
     img: require('../assets/images/svg-1.svg').default,
     alt: "Me",
     dark: false,
@@ -30,38 +33,20 @@ export const aboutMe = {
     darkText: true
 };
 
-export const services = {
-    id: "services",
+export const skills = {
+    id: "skills",
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: "Services I offer...",
-    headLine: "hey there, i am Ronit and this is my React Page!",
-    description:
-        `I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page. 
-        I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page.
-        I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page. 
-        I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page.
-        I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page. 
-        I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page.
-        I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page. 
-        I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page.
-        I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page. 
-        I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page.
-        I am a software developer and been working with Cisco. 
-        I have learnt to use reactJS and thus came up with this page.`,
-    imgStart: true,
-    img: require('../assets/images/svg-1.svg').default,
+    topLine: "My Skills...",
+    headLine: `The true sign of intelligence is not knowledge, but imagination.
+        - Albert Einstein`,
+    description: [
+        `Tap on for more details!`
+    ],
+    imgStart: false,
+    isImg: false,
+    img: <DoughnutChart />,
     alt: "Me",
     dark: true,
     primary: true,

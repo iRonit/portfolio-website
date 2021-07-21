@@ -10,6 +10,11 @@ export const navMenuItems = [
         routeType: "S"
     },
     {
+        title: "Work",
+        route: "work",
+        routeType: "S"
+    },
+    {
         title: "Experience",
         route: "experience",
         routeType: "S"

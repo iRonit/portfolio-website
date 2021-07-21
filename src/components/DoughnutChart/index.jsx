@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
+import Modal from './Modal';
 
 const DoughnutChart = () => {
     const data = {
@@ -66,8 +67,11 @@ const DoughnutChart = () => {
                     }
                 }
             }
+        },
+        onClick: (e, element) => {
+            setShowModal(true);
+            document.body.style.overflow = "hidden";
         }
-
     };
 
     const image = new Image();
@@ -88,8 +92,12 @@ const DoughnutChart = () => {
         }
     };
 
+    // For Modal
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <>
+            <Modal showModal={showModal} setShowModal={setShowModal} />
             <Doughnut data={data} options={options} plugins={[plugin]} />
         </>
     )

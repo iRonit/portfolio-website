@@ -40,6 +40,7 @@ const DoughnutChart = () => {
     };
 
     const options = {
+        aspectRatio: 0.75,
         layout: {
             padding: 30
         },
@@ -57,6 +58,7 @@ const DoughnutChart = () => {
             },
             legend: {
                 position: 'bottom',
+                align: 'start',
                 labels: {
                     padding: 20,
                     font: {

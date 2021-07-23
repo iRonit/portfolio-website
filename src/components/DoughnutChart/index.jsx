@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
-import Modal from './Modal';
+import { backendSkills, frontendSkills, illustrationSkills } from '../../data/Skills';
+import Modal from '../Modal/Modal';
 
 const DoughnutChart = () => {
     const data = {
@@ -28,9 +29,9 @@ const DoughnutChart = () => {
 
     const getLevel = (value) => {
         if (value < 20) {
-            return "Beginner";
+            return "Novice";
         } else if (value < 40) {
-            return "Mediocre";
+            return "Proficient";
         } else {
             return "Expert";
         }
@@ -69,8 +70,19 @@ const DoughnutChart = () => {
             }
         },
         onClick: (e, element) => {
-            setShowModal(true);
-            document.body.style.overflow = "hidden";
+            console.log(element);
+            if (element.length === 0)
+                return;
+            if (element[0].index === 0) {
+                setShowBEModal(true);
+                document.body.style.overflow = "hidden";
+            } else if (element[0].index === 1) {
+                setShowFEModal(true);
+                document.body.style.overflow = "hidden";
+            } else if (element[0].index === 2) {
+                setShowILModal(true);
+                document.body.style.overflow = "hidden";
+            }
         }
     };
 
@@ -93,11 +105,15 @@ const DoughnutChart = () => {
     };
 
     // For Modal
-    const [showModal, setShowModal] = useState(false);
+    const [showBEModal, setShowBEModal] = useState(false);
+    const [showFEModal, setShowFEModal] = useState(false);
+    const [showILModal, setShowILModal] = useState(false);
 
     return (
         <>
-            <Modal showModal={showModal} setShowModal={setShowModal} />
+            <Modal showModal={showBEModal} setShowModal={setShowBEModal} skillItem={backendSkills} />
+            <Modal showModal={showFEModal} setShowModal={setShowFEModal} skillItem={frontendSkills} />
+            <Modal showModal={showILModal} setShowModal={setShowILModal} skillItem={illustrationSkills} />
             <Doughnut data={data} options={options} plugins={[plugin]} />
         </>
     )

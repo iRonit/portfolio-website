@@ -1,4 +1,5 @@
 import DoughnutChart from "../components/DoughnutChart";
+import { backendSkills } from "./Skills";
 
 export const aboutMe = {
     id: "about-me",
@@ -24,8 +25,7 @@ export const aboutMe = {
         over the place), ranging from design, sketching up logos, illustrations, UI,
         backend system designs, scaling up performances, etc.`
     ],
-    imgStart: true,
-    isImg: true,
+    col1Start: false,
     img: require('../assets/images/svg-1.svg').default,
     alt: "Me",
     dark: false,
@@ -44,10 +44,8 @@ export const skills = {
     description: [
         `Tap on for more details!`
     ],
-    imgStart: false,
-    isImg: false,
-    img: <DoughnutChart />,
-    alt: "Me",
+    col1Start: true,
+    col2: <DoughnutChart />,
     dark: true,
     primary: true,
     darkText: false

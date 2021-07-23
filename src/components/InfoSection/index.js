@@ -16,45 +16,51 @@ import {
 const InfoSection = ({
   lightBg,
   id,
-  imgStart,
+  col1Start,
   topLine,
   lightText,
+  col1,
   headLine,
   darkText,
   description,
-  isImg,
   img,
+  col2,
   alt }) => {
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
           <TopLine lightText={lightText}>{topLine}</TopLine>
-          <InfoRow imgStart={imgStart}>
+          <InfoRow col1Start={col1Start}>
             <Column1>
-              <TextWrapper>
-                <Heading lightText={lightText}>
-                  <i className="fa fa-quote-left fa-pull-left"></i>
-                  {headLine}
-                  <i className="fa fa-quote-right fa-pull-right"></i>
-                </Heading>
-                {
-                  description.map(desc => {
-                    return (
-                      <Subtitle darkText={darkText}>{desc}</Subtitle>
-                    );
-                  })
-                }
-              </TextWrapper>
+              {
+                col1 == null ?
+                  <TextWrapper>
+                    <Heading lightText={lightText}>
+                      <i className="fa fa-quote-left fa-pull-left"></i>
+                      {headLine}
+                      <i className="fa fa-quote-right fa-pull-right"></i>
+                    </Heading>
+                    {
+                      description.map(desc => {
+                        return (
+                          <Subtitle darkText={darkText}>{desc}</Subtitle>
+                        );
+                      })
+                    }
+                  </TextWrapper>
+                  :
+                  col1
+              }
             </Column1>
             <Column2>
               {
-                isImg ?
+                col2 == null ?
                   <ImgWrap>
                     <Img src={img} alt={alt} />
                   </ImgWrap>
                   :
-                  img
+                  col2
               }
             </Column2>
           </InfoRow>

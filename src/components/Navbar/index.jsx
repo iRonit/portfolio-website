@@ -50,7 +50,7 @@ const Navbar = ({ toggle, navMenuItems }) => {
 
   return (
     <>
-      <Nav scrollNav={scrollNav} shouldShowActions={shouldShowActions}>
+      <Nav scrollNav={scrollNav} shouldShowActions={shouldShowActions} id='navbar'>
         <NavbarContainer>
           <NavLogo to="/" onClick={toggleHome}>
             {navBarText}

@@ -5,8 +5,11 @@ import styled from "styled-components";
 
 export const Nav = styled(motion.nav).attrs((props) => {
   return {
-    initial: { opacity: 0 },
-    animate: { opacity: props.shouldShowActions ? 1 : 0 },
+    initial: { opacity: 0, y: -100 },
+    animate: {
+      opacity: props.shouldShowActions ? 1 : 0,
+      y: props.shouldShowActions ? 0 : -100
+    },
     transition: { opacity: { duration: 0.2 } }
   }
 })`

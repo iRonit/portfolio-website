@@ -84,22 +84,25 @@ const DoughnutChart = () => {
             setModalAnimate(true);
 
             if (element[0].index === 0) {
-                setAnimateCoX(newX);
-                setAnimateCoY(newY);
+                openModal(newX, newY);
                 setShowBEModal(true);
-                document.body.style.overflow = "hidden";
             } else if (element[0].index === 1) {
-                setAnimateCoX(newX);
-                setAnimateCoY(newY);
+                openModal(newX, newY);
                 setShowFEModal(true);
-                document.body.style.overflow = "hidden";
             } else if (element[0].index === 2) {
-                setAnimateCoX(newX);
-                setAnimateCoY(newY);
+                openModal(newX, newY);
                 setShowILModal(true);
-                document.body.style.overflow = "hidden";
             }
         }
+    };
+
+    const openModal = function (posX, posY) {
+        setAnimateCoX(posX);
+        setAnimateCoY(posY);
+        if (document.getElementById('navbar') != null) {
+            document.getElementById('navbar').style['display'] = 'none';
+        }
+        document.body.style.overflow = "hidden";
     };
 
     const image = new Image();

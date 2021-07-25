@@ -10,6 +10,9 @@ const Modal = ({ showModal, setShowModal, setModalAnimate, animationCoordinates,
         setShowModal(false);
         setModalAnimate(false);
         document.body.style.overflow = "auto";
+        if (document.getElementById('navbar') != null) {
+            document.getElementById('navbar').style['display'] = 'flex';
+        }
     };
 
     // Clicking outside the modal

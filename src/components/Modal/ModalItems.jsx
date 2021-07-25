@@ -6,12 +6,13 @@ export const CardContainer = styled.div`
     display: block;
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 999;
+
   
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -23,13 +24,11 @@ export const Card = styled(motion.div).attrs(({ x, y }) => ({
     exit: { x: x, y: y, scale: 0, duration: 0.25 },
     transition: { duration: 0.5 }
 }))`
-    margin: 5% auto;
-    margin-left: auto;
-    margin-right: auto;
+
+    margin: 5% auto auto;
     max-width: 80%;
-    max-height: 85%;
-    left: auto;
-    right: auto;
+    max-height: 90%;
+
     z-index: 1000;
     border-radius: 15px;
     padding: 20px;
@@ -37,16 +36,7 @@ export const Card = styled(motion.div).attrs(({ x, y }) => ({
     background: ${props => props.bgColor};
     overflow: auto;
 
-    @media screen and (max-height: 700px) {
-      margin: 10% auto;
-    }
-
-    @media screen and (max-height: 500px), screen and (max-width: 460px) {
-      margin: 15% auto;
-    }
-
     @media screen and (max-height: 360px), screen and (max-width: 460px) {
-      margin: 25% auto;
       width: 95%;
     }
 `;

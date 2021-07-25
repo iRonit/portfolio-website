@@ -10,7 +10,7 @@ const SkillBar = ({ skill, bgColor }) => {
             width: `${skill.rate}%`
         }
         setStyle(newStyle);
-    }, 50);
+    }, 10);
 
     return (
         <BarContainer>

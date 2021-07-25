@@ -16,7 +16,6 @@ function Home() {
       <InfoSection {...aboutMe} />
       <InfoSection {...skills} />
       <TimeLine timeLineItems={timeLineItems} id="experience" />
-      <Cards />
       <Footer />
     </>
   );

@@ -14,7 +14,6 @@ export const CardContainer = styled.div`
   
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.4);
 `;
 
 export const Card = styled.div`
@@ -42,7 +41,7 @@ export const Card = styled.div`
 
     @media screen and (max-height: 360px), screen and (max-width: 460px) {
       margin: 25% auto;
-      width: 90%;
+      width: 95%;
     }
 `;
 
@@ -50,6 +49,7 @@ export const CardRow = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+    padding-top: 30px;
 
     @media screen and (max-width: 768px) {
         grid-template-columns: none;
@@ -64,11 +64,16 @@ export const ModalContent = styled.div`
     line-height: 1.8;
     color: black;
     grid-area: ${(gridArea) => gridArea};
-    padding: 50px;
+    padding: 30px;
 
     h3 {
         font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 200;
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: none;
+        padding: 0;
     }
 `;
 
@@ -83,6 +88,10 @@ export const SkillSection = styled.div`
     margin-bottom: 15px;
     background-color: white;
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.4);
+
+    &:hover {
+        
+    }
     
 `;
 
@@ -119,32 +128,34 @@ export const BarComplete = styled.div`
     position: absolute;
 
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 200;
+    font-weight: 200;
 
-    &::before {
-        position: absolute;
-        content: "";
-        right: 0;
-        top: -10px;
-        height: 0;
-        width: 0;
-        border: 7px solid transparent;
-        border-bottom-width: 0px;
-        border-right-width: 0px;
-        border-top-color: #000;
-    }
+    ${SkillSection}:hover & {
+        &::before {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: -10px;
+            height: 0;
+            width: 0;
+            border: 7px solid transparent;
+            border-bottom-width: 0px;
+            border-right-width: 0px;
+            border-top-color: #000;
+         }
 
-    &::after {
-        position: absolute;
-        content: "${props => props.rate}%";
-        right: 0;
-        top: -28px;
-        color: #fff;
-        font-size: 12px;
-        font-weight: 500;
-        background: #000;
-        padding: 1px 8px;
-        border-radius: 3px;
+        &::after {
+            position: absolute;
+            content: "${props => props.rate}%";
+            right: 0;
+            top: -28px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            background: #000;
+            padding: 1px 8px;
+            border-radius: 3px;
+        }
     }
 `;
 

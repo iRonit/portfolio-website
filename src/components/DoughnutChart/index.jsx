@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { backendSkills, frontendSkills, illustrationSkills } from '../../data/Skills';
-import Modal from '../Modal/Modal';
+import Modal from '../Modal';
 
 const DoughnutChart = () => {
     const data = {

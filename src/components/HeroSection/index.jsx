@@ -7,6 +7,7 @@ import {
   ArrowDown, HeroBg, HeroContainer, HeroContent, HeroH1, HeroP, KnowMoreButtonContainer,
   KnowMoreButton, SocialSiteIcon, SocialSiteIcons, SocialSitesContent, VideoBg
 } from "./HeroElements";
+import Parallax from 'react-rellax';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -18,20 +19,23 @@ const HeroSection = () => {
           <VideoBg autoPlay loop muted src={heroVideo} type="video/mp4" />
         </HeroBg>
         <HeroContent>
-          <HeroH1>Hello, I'm Ronit :)</HeroH1>
-          <HeroP>
-            <Typed
-              className="typed-text"
-              strings={[
-                "Full Stack Developer",
-                "React/Angular Front End Developer",
-                "Java Backend Developer"
-              ]}
-              typeSpeed={40}
-              backSpeed={80}
-              loop
-            />
-          </HeroP>
+          <Parallax speed={-5}>
+            <HeroH1>Hello, I'm Ronit :)</HeroH1>
+            <HeroP>
+              <Typed
+                className="typed-text"
+                strings={[
+                  "Full Stack Developer",
+                  "React/Angular Front End Developer",
+                  "Java Backend Developer"
+                ]}
+                typeSpeed={40}
+                backSpeed={80}
+                loop
+              />
+            </HeroP>
+          </Parallax>
+
         </HeroContent>
       </HeroContainer>
 

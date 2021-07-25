@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MdClose } from 'react-icons/md';
+import { motion } from "framer-motion";
 
 export const CardContainer = styled.div`
     display: block;
@@ -16,7 +17,12 @@ export const CardContainer = styled.div`
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 `;
 
-export const Card = styled.div`
+export const Card = styled(motion.div).attrs(({ x, y }) => ({
+    initial: { x: x, y: y, scale: 0.1 },
+    animate: { x: 0, y: 0, scale: 1 },
+    exit: { x: x, y: y, scale: 0, duration: 0.25 },
+    transition: { duration: 0.5 }
+}))`
     margin: 5% auto;
     margin-left: auto;
     margin-right: auto;
@@ -90,7 +96,9 @@ export const SkillSection = styled.div`
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.4);
 
     &:hover {
-        
+        div::before, div::after{
+            opacity: 1;
+        }
     }
     
 `;
@@ -130,8 +138,8 @@ export const BarComplete = styled.div`
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 200;
 
-    ${SkillSection}:hover & {
-        &::before {
+    & {
+        ::before {
             position: absolute;
             content: "";
             right: 0;
@@ -142,9 +150,10 @@ export const BarComplete = styled.div`
             border-bottom-width: 0px;
             border-right-width: 0px;
             border-top-color: #000;
+            opacity: 0;
          }
 
-        &::after {
+        ::after {
             position: absolute;
             content: "${props => props.rate}%";
             right: 0;
@@ -155,6 +164,7 @@ export const BarComplete = styled.div`
             background: #000;
             padding: 1px 8px;
             border-radius: 3px;
+            opacity: 0;
         }
     }
 `;

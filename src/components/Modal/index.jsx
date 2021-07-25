@@ -1,23 +1,29 @@
+import { AnimatePresence } from 'framer-motion';
 import React, { useCallback, useEffect, useRef } from 'react';
 import { Card, CardContainer, CardRow, CloseModalButton, ModalContent } from './ModalItems';
 import SkillBars from './SkillBars';
 
-const Modal = ({ showModal, setShowModal, skillItem }) => {
+const Modal = ({ showModal, setShowModal, setModalAnimate, animationCoordinates, skillItem }) => {
+
+    // Close Modal
+    const closeModal = function () {
+        setShowModal(false);
+        setModalAnimate(false);
+        document.body.style.overflow = "auto";
+    };
 
     // Clicking outside the modal
     const modalRef = useRef();
-    const closeModal = e => {
+    const closeModalOnClickOutside = e => {
         if (modalRef.current === e.target) {
-            setShowModal(false);
-            document.body.style.overflow = "auto";
+            closeModal();
         }
     };
 
     // Pressing on Escape key
     const keyPress = useCallback(e => {
         if (e.key === 'Escape') {
-            setShowModal(false);
-            document.body.style.overflow = "auto";
+            closeModal();
         }
     }, [setShowModal, showModal]);
     useEffect(() => {
@@ -26,13 +32,13 @@ const Modal = ({ showModal, setShowModal, skillItem }) => {
     }, [keyPress]);
 
     return (
-        <>
+        <AnimatePresence>
             {
                 showModal &&
-                <CardContainer ref={modalRef} onClick={closeModal}>
-                    <Card bgColor={skillItem.bgColor}>
+                <CardContainer ref={modalRef} onClick={closeModalOnClickOutside}>
+                    <Card bgColor={skillItem.bgColor} x={animationCoordinates.x} y={animationCoordinates.y}>
                         <CloseModalButton
-                            onClick={() => { setShowModal(false); document.body.style.overflow = "auto"; }}
+                            onClick={() => { closeModal(); }}
                         />
                         <CardRow>
                             {/* Column1 */}
@@ -65,7 +71,7 @@ const Modal = ({ showModal, setShowModal, skillItem }) => {
                     </Card>
                 </CardContainer>
             }
-        </>
+        </AnimatePresence>
     )
 }
 

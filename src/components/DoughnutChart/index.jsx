@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { backendSkills, frontendSkills, illustrationSkills } from '../../data/Skills';
@@ -69,17 +70,32 @@ const DoughnutChart = () => {
                 }
             }
         },
-        onClick: (e, element) => {
-            console.log(element);
+        onClick: (event, element) => {
+            console.log(event)
+            console.log(element)
             if (element.length === 0)
                 return;
+
+            const newX = event.x;
+            const newY = event.y;
+
+            console.log(newX, newY);
+
+            setModalAnimate(true);
+
             if (element[0].index === 0) {
+                setAnimateCoX(newX);
+                setAnimateCoY(newY);
                 setShowBEModal(true);
                 document.body.style.overflow = "hidden";
             } else if (element[0].index === 1) {
+                setAnimateCoX(newX);
+                setAnimateCoY(newY);
                 setShowFEModal(true);
                 document.body.style.overflow = "hidden";
             } else if (element[0].index === 2) {
+                setAnimateCoX(newX);
+                setAnimateCoY(newY);
                 setShowILModal(true);
                 document.body.style.overflow = "hidden";
             }
@@ -109,12 +125,27 @@ const DoughnutChart = () => {
     const [showFEModal, setShowFEModal] = useState(false);
     const [showILModal, setShowILModal] = useState(false);
 
+    //Animation
+    const variants = {
+        start: { scale: 0, transition: { duration: 0.5 } },
+        // You can do whatever you want here, if you just want it to stop completely use `rotate: 0`
+        stop: { scale: 1, transition: { duration: 0.5 } }
+    };
+    const [modalAnimate, setModalAnimate] = useState(false);
+    const [animateCoX, setAnimateCoX] = useState(500);
+    const [animateCoY, setAnimateCoY] = useState(50);
+
+
     return (
         <>
-            <Modal showModal={showBEModal} setShowModal={setShowBEModal} skillItem={backendSkills} />
-            <Modal showModal={showFEModal} setShowModal={setShowFEModal} skillItem={frontendSkills} />
-            <Modal showModal={showILModal} setShowModal={setShowILModal} skillItem={illustrationSkills} />
-            <Doughnut data={data} options={options} plugins={[plugin]} />
+            <Modal showModal={showBEModal} setShowModal={setShowBEModal} setModalAnimate={setModalAnimate} animationCoordinates={{ x: animateCoX, y: animateCoY }} skillItem={backendSkills} />
+            <Modal showModal={showFEModal} setShowModal={setShowFEModal} setModalAnimate={setModalAnimate} animationCoordinates={{ x: animateCoX, y: animateCoY }} skillItem={frontendSkills} />
+            <Modal showModal={showILModal} setShowModal={setShowILModal} setModalAnimate={setModalAnimate} animationCoordinates={{ x: animateCoX, y: animateCoY }} skillItem={illustrationSkills} />
+            <motion.div
+                variants={variants}
+                animate={modalAnimate ? 'start' : 'stop'}>
+                <Doughnut data={data} options={options} plugins={[plugin]} />
+            </motion.div>
         </>
     )
 }

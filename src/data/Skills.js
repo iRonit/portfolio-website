@@ -5,12 +5,16 @@ export const backendSkills = {
             title: "Languages",
             skills: [
                 {
-                    name: "Java (8)",
+                    name: "Java - Primary",
                     rate: "90"
                 },
                 {
                     name: "Python",
-                    rate: "60"
+                    rate: "50"
+                },
+                {
+                    name: "Javascript",
+                    rate: "70"
                 }
             ]
         },
@@ -30,6 +34,10 @@ export const backendSkills = {
                     rate: "90"
                 },
                 {
+                    name: "Spring MVC",
+                    rate: "90"
+                },
+                {
                     name: "Spring Batch",
                     rate: "50"
                 },
@@ -38,35 +46,20 @@ export const backendSkills = {
                     rate: "50"
                 },
                 {
+                    name: "Spring Security",
+                    rate: "40"
+                },
+                {
                     name: "Java Collection Framework",
                     rate: "90"
                 },
                 {
-                    name: "NodeJS",
-                    rate: "40"
-                },
-                {
                     name: "Django",
                     rate: "50"
-                }
-            ]
-        }
-    ],
-    col2: [
-        {
-            title: "Unit Testing",
-            skills: [
-                {
-                    name: "JUnit",
-                    rate: "90"
                 },
                 {
-                    name: "WireMock",
-                    rate: "80"
-                },
-                {
-                    name: "PowerMock",
-                    rate: "80"
+                    name: "NodeJS",
+                    rate: "40"
                 }
             ]
         },
@@ -87,34 +80,12 @@ export const backendSkills = {
                 },
                 {
                     name: "Amazon S3",
-                    rate: "60"
+                    rate: "50"
                 },
             ]
         },
-        {
-            title: "Message Brokers",
-            skills: [
-                {
-                    name: "Kafka",
-                    rate: "60"
-                },
-                {
-                    name: "Redis",
-                    rate: "60"
-                }
-            ]
-        },
-        {
-            title: "Version Control",
-            skills: [
-                {
-                    name: "Git / Github",
-                    rate: "90"
-                }
-            ]
-        }
     ],
-    col3: [
+    col2: [
         {
             title: "Architectural Patterns",
             skills: [
@@ -170,6 +141,77 @@ export const backendSkills = {
             ]
         },
         {
+            title: "Message Brokers",
+            skills: [
+                {
+                    name: "Kafka",
+                    rate: "60"
+                },
+                {
+                    name: "Redis",
+                    rate: "60"
+                }
+            ]
+        }
+    ],
+    col3: [
+        {
+            title: "Conceptual/Supplementary",
+            skills: [
+                {
+                    name: "Networking",
+                    rate: "60"
+                },
+                {
+                    name: "HTTP/HTTPS",
+                    rate: "75"
+                },
+                {
+                    name: "OAuth2",
+                    rate: "60"
+                }
+            ]
+        },
+        {
+            title: "Unit Testing",
+            skills: [
+                {
+                    name: "JUnit",
+                    rate: "90"
+                },
+                {
+                    name: "Mockito",
+                    rate: "80"
+                },
+                {
+                    name: "PowerMock",
+                    rate: "80"
+                }
+            ]
+        },
+        {
+            title: "Version Control",
+            skills: [
+                {
+                    name: "Git / Github",
+                    rate: "90"
+                }
+            ]
+        },
+        {
+            title: "Web Servers",
+            skills: [
+                {
+                    name: "Apache Tomcat",
+                    rate: "90"
+                },
+                {
+                    name: "Nginx",
+                    rate: "55"
+                }
+            ]
+        },
+        {
             title: "Tools",
             skills: [
                 {
@@ -186,7 +228,7 @@ export const backendSkills = {
                 },
                 {
                     name: "JIRA",
-                    rate: "80"
+                    rate: "90"
                 }
             ]
         }
@@ -229,6 +271,10 @@ export const frontendSkills = {
                 {
                     name: "Angular",
                     rate: "40"
+                },
+                {
+                    name: "BootStrap 4",
+                    rate: "40"
                 }
             ]
         }
@@ -244,6 +290,15 @@ export const frontendSkills = {
                 {
                     name: "Wix",
                     rate: "40"
+                }
+            ]
+        },
+        {
+            title: "Others",
+            skills: [
+                {
+                    name: "Responsive Design",
+                    rate: "70"
                 }
             ]
         }

@@ -49,6 +49,9 @@ h1 {
   width: 100%;
   padding-top: 67%;
   overflow: hidden;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
 }
 
 .fade-img {
@@ -63,7 +66,7 @@ h1 {
   margin-left: 10px;
   padding: 6px 8px;
   max-width: calc((100%) - 60px);
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 700;
   color: #fff;
   background-color: #1f98f4;
@@ -95,8 +98,10 @@ h1 {
 
 .cards__item__text {
   color: #252e48;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
+
+  font-family: "Over the Rainbow", cursive;
 }
 
 @media only screen and (min-width: 1200px) {

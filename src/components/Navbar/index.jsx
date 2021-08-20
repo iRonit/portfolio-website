@@ -32,7 +32,7 @@ const Navbar = ({ toggle, navMenuItems }) => {
   const toggleClickedAutoScroll = () => {
     setTimeout(function () {
       setShouldShowActions(true);
-    }, 500);
+    }, 300);
   }
   useEffect(() => {
     function handleScroll() {

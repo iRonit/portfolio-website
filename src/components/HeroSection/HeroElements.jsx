@@ -130,13 +130,9 @@ export const SocialSitesContent = styled.div`
 
   @media screen and (max-width: 768px), screen and (max-height: 620px) {
     bottom: 0;
-    position: inherit;
-
-    &:hover {
-      transition: 600ms;
-      right: auto;
-      left: auto;
-    }
+    left: 0;
+    right: 0;
+    position: absolute;
   }
 `;
 
@@ -156,7 +152,16 @@ export const SocialSiteIcon = styled.div`
   }
 `;
 
-export const KnowMoreButtonContainer = styled.div`
+export const KnowMoreButtonContainer = styled(motion.div).attrs((props) => {
+  return {
+    initial: { opacity: 0, y: -100 },
+    animate: {
+      opacity: props.shouldShowActions ? 1 : 0,
+      y: props.shouldShowActions ? 0 : -100
+    },
+    transition: { opacity: { duration: 0.2 } }
+  }
+})`
   position: absolute;
   bottom: 20px;
   width: 100%;

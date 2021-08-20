@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaStackOverflow } from 'react-icons/fa';
 import Typed from "react-typed";
 import heroVideo from "../../assets/videos/video-3.mp4";
@@ -10,8 +10,22 @@ import {
 import Parallax from 'react-rellax';
 
 const HeroSection = () => {
-  const [hover, setHover] = useState(false);
-  const onHover = () => setHover(!hover);
+  // Scroll Up Disappear
+  const [lastYPos, setLastYPos] = useState(0);
+  const [shouldShowActions, setShouldShowActions] = useState(true);
+  useEffect(() => {
+    function handleScroll() {
+      const yPos = window.scrollY;
+      const isScrollingUp = (yPos < lastYPos + 1) && (window.scrollY <= 0.3 * document.getElementById('home').clientHeight);
+      setShouldShowActions(isScrollingUp);
+      setLastYPos(yPos);
+    }
+    window.addEventListener("scroll", handleScroll, false);
+    return () => {
+      window.removeEventListener("scroll", handleScroll, false);
+    };
+  }, [lastYPos]);
+
   return (
     <>
       <HeroContainer id="home">
@@ -39,7 +53,7 @@ const HeroSection = () => {
         </HeroContent>
       </HeroContainer>
 
-      <KnowMoreButtonContainer>
+      <KnowMoreButtonContainer shouldShowActions={shouldShowActions}>
         <KnowMoreButton
           to="about-me"
         >

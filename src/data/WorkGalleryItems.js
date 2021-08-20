@@ -28,21 +28,21 @@ export const workGallery = {
             cards: [
                 {
                     image: image1,
-                    text: 'Explore the hidden waterfall deep inside the Amazon Jungle',
+                    text: 'My Illustrations - Waiting to upload them!',
                     label: 'ILLUSTRATION',
                     path: 'some path'
 
                 },
                 {
                     image: image2,
-                    text: 'Travel through the Islands of Bali in a Private Cruise',
+                    text: 'My take on photography! Planning on building a website for that.',
                     label: 'PHOTOGRAPHY',
                     path: 'some path'
 
                 },
                 {
                     image: image2,
-                    text: 'Travel through the Islands of Bali in a Private Cruise',
+                    text: 'What is any work without an artistic touch!',
                     label: 'ART',
                     path: 'some path'
 

@@ -54,7 +54,7 @@ export const TextWrapper = styled.div`
 
 export const TopLine = styled.p`
     color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: 1.4px;
     text-transform: uppercase;

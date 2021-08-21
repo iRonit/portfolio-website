@@ -36,8 +36,11 @@ export const Card = styled(motion.div).attrs(({ x, y }) => ({
     background: ${props => props.bgColor};
     overflow: auto;
 
-    @media screen and (max-height: 360px), screen and (max-width: 460px) {
-      width: 95%;
+    @media screen and (max-height: 640px), screen and (max-width: 460px) {
+      max-width: 100%;
+      max-height: 100%;
+      padding: 10px;
+      margin: 0;
     }
 `;
 

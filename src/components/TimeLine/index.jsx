@@ -20,7 +20,7 @@ const TimeLine = ({ id, timeLineItems }) => {
                                 contentStyle={timeLineItem.contentStyle}
                                 contentArrowStyle={timeLineItem.arrowStyle}
                                 date={timeLineItem.date}
-                                dateClassName="dateInTimeLine"
+                                dateClassName={timeLineItem.dateClass}
                                 iconStyle={timeLineItem.iconStyle}
                                 icon={timeLineItem.icon}
                             >

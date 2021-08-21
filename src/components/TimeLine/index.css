@@ -1,9 +1,21 @@
-.dateInTimeLine {
+.dateInTimeLineW {
   color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.dateInTimeLineB {
+  color: #000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
 }
 
 .vertical-timeline-element .vertical-timeline-element-date {
   opacity: 1;
+}
+
+@media screen and (min-width: 1170px) {
+  .dateInTimeLineB {
+    color: #fff;
+  }
 }

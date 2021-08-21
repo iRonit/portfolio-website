@@ -9,6 +9,7 @@ export const timeLineItems = [
         subtitle: "Cisco, Bangalore, India",
         paragraph: "",
         date: "Mar, 2020 - Present",
+        dateClass: "dateInTimeLineW",
         icon: <CiscoLogo />,
         iconStyle: { background: '#049fd9', color: '#fff' },
         contentStyle: { boxShadow: 'none', background: 'rgb(33, 150, 243)', color: '#fff', borderRadius: '20px' },
@@ -19,6 +20,7 @@ export const timeLineItems = [
         subtitle: "Extreme Network, Bangalore, India",
         paragraph: "",
         date: "Nov, 2018 - Mar, 2020",
+        dateClass: "dateInTimeLineW",
         icon: <ExtremeLogo />,
         iconStyle: { background: '#fff', color: 'rgb(114 57 222)' },
         contentStyle: { boxShadow: 'none', background: 'rgb(114 57 222)', color: '#fff', borderRadius: '20px' },
@@ -29,6 +31,7 @@ export const timeLineItems = [
         subtitle: "Infosys, Bangalore, India",
         paragraph: "",
         date: "Jul, 2018 - Nov, 2018",
+        dateClass: "dateInTimeLineB",
         icon: <InfosysLogo />,
         iconStyle: { background: '#fff', color: "#3781c2" },
         contentStyle: { boxShadow: 'none', background: '#fff', color: '#000', borderRadius: '20px' },
@@ -39,6 +42,7 @@ export const timeLineItems = [
         subtitle: "Infosys, Bangalore, India",
         paragraph: "",
         date: "Jul, 2016 - Jul, 2018",
+        dateClass: "dateInTimeLineB",
         icon: <InfosysLogo />,
         iconStyle: { background: '#fff', color: '#3781c2' },
         contentStyle: { boxShadow: 'none', background: '#fff', color: '#000', borderRadius: '20px' },
@@ -49,9 +53,10 @@ export const timeLineItems = [
         subtitle: "Hindustan University, Chennai, India",
         paragraph: "",
         date: "Aug, 2012 - Mar, 2016",
+        dateClass: "dateInTimeLineW",
         icon: <FaGraduationCap />,
         iconStyle: { background: '#fff', color: '#3781c2' },
-        contentStyle: { boxShadow: 'none', background: '#fff', color: '#000', borderRadius: '20px' },
-        arrowStyle: { borderRight: '7px solid  #fff' }
+        contentStyle: { boxShadow: 'none', background: "#ff7f50", color: '#fff', borderRadius: '20px' },
+        arrowStyle: { borderRight: '7px solid  #ff7f50' }
     }
 ];

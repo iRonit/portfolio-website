@@ -28,10 +28,10 @@ const Contact = (props) => {
     return (
         <>
             <BackButton
-                initial={{ opacity: 0, x: -10 }}
+                initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 50 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 1.5 }}>
+                transition={{ delay: 1, duration: 1.5 }}>
                 <NavLogo to="/">
                     My Portfolio
                     <i className="fab fa-typo3" style={{ marginLeft: 0.5 + 'em' }} />
@@ -39,10 +39,10 @@ const Contact = (props) => {
             </BackButton>
             <ContactContainer id="contact">
                 <motion.div
-                    initial={{ opacity: 0, y: 100 }}
+                    initial={{ opacity: 0, y: 250 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 1.5 }}>
+                    transition={{ type: "spring", stiffness: 100, duration: 1.5 }}>
                     <Card>
                         <CardContainer>
                             <p>Contact Me</p>

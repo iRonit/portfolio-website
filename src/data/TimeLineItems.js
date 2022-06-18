@@ -1,14 +1,26 @@
 import InfosysLogo from '../assets/svgIcons/InfosysLogo';
 import ExtremeLogo from '../assets/svgIcons/ExtremeLogo';
-import { SiCisco as CiscoLogo } from 'react-icons/si';
-import { FaGraduationCap } from 'react-icons/fa';
+import NCRLogo from '../assets/svgIcons/NCRLogo';
+import {SiCisco as CiscoLogo} from 'react-icons/si';
+import {FaGraduationCap} from 'react-icons/fa';
 
 export const timeLineItems = [
     {
         title: "Software Engineer II",
+        subtitle: "NCR, Dundee, United Kingdom",
+        paragraph: "",
+        date: "Feb, 2022 - Present",
+        dateClass: "dateInTimeLineW",
+        icon: <NCRLogo />,
+        iconStyle: { background: '#54bc4c', color: '#fff' },
+        contentStyle: { boxShadow: 'none', background: 'rgb(84,188,76)', color: '#fff', borderRadius: '20px' },
+        arrowStyle: { borderRight: '7px solid  rgb(84,188,76)' }
+    },
+    {
+        title: "Software Engineer II",
         subtitle: "Cisco, Bangalore, India",
         paragraph: "",
-        date: "Mar, 2020 - Present",
+        date: "Mar, 2020 - Jan, 2022",
         dateClass: "dateInTimeLineW",
         icon: <CiscoLogo />,
         iconStyle: { background: '#049fd9', color: '#fff' },

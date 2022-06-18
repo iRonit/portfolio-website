@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import {FacebookShareButton, LinkedinShareButton, TwitterShareButton, WhatsappShareButton} from 'react-share';
 import './Footer.css';
 
 function Footer() {
@@ -25,46 +26,58 @@ function Footer() {
           <small className='website-rights'>Copyright © 2021 All rights reserved.</small>
           <div className='social-icons'>
             <small className='footer-share-text'>Share on:</small>
-            <Link
-              className='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
+
+            <FacebookShareButton
+              url="https://ironit.github.io/portfolio-website/"
+              quote="Please do share and support!">
+              <Link
+                className='social-icon-link facebook'
+                aria-label='Facebook'
+                target='_blank'
+              >
+                <i className='fab fa-facebook-f' />
+              </Link>
+            </FacebookShareButton>
+
+            <WhatsappShareButton
+              url="https://ironit.github.io/portfolio-website/"
+              title="Please do share and support!"
             >
-              <i className='fab fa-facebook-f' />
-            </Link>
-            <Link
-              className='social-icon-link instagram'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
+              <Link
+                className='social-icon-link whatsapp'
+                aria-label='Whatsapp'
+                target='_blank'
+              >
+                <i className='fab fa-whatsapp' />
+              </Link>
+            </WhatsappShareButton>
+
+            <LinkedinShareButton
+              url="https://ironit.github.io/portfolio-website/"
+              summary="Please do share and support!"
             >
-              <i className='fab fa-instagram' />
-            </Link>
-            <Link
-              className='social-icon-link youtube'
-              to='/'
-              target='_blank'
-              aria-label='Youtube'
+              <Link
+                className='social-icon-link linkedin'
+                aria-label='LinkedIn'
+                target='_blank'
+              >
+                <i className='fab fa-linkedin' />
+              </Link>
+            </LinkedinShareButton>
+
+            <TwitterShareButton
+              url="https://ironit.github.io/portfolio-website/"
+              title="Please do share and support!"
             >
-              <i className='fab fa-youtube' />
-            </Link>
-            <Link
-              className='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <i className='fab fa-twitter' />
-            </Link>
-            <Link
-              className='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i className='fab fa-linkedin' />
-            </Link>
+              <Link
+                className='social-icon-link twitter'
+                aria-label='Twitter'
+                target='_blank'
+              >
+                <i className='fab fa-twitter' />
+              </Link>
+            </TwitterShareButton>
+
           </div>
         </div>
       </section>

@@ -21,6 +21,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.2",
+    "react-share": "^4.4.0",
     "react-typed": "^1.2.0",
     "react-vertical-timeline-component": "^3.3.3",
     "styled-components": "^5.3.0",

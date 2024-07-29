@@ -66,7 +66,7 @@ const Map = () => {
     return (
         <>
             <div>
-                <ReactMapGL mapboxApiAccessToken='pk.eyJ1IjoiaXJvbml0IiwiYSI6ImNrcWYxMGdsYjBpMHUydm5uYno3a254bDEifQ.hfY2_xkZZajjAK4s3cvSLQ'
+                <ReactMapGL mapboxApiAccessToken= {process.env.MAP_API_KEY}
                     {...viewport}
                     {...settings}
                     mapStyle='mapbox://styles/mapbox/streets-v11'
